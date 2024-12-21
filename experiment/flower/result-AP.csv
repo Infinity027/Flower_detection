@@ -1,0 +1,6 @@
+,CATEGORY,AP_50,NUM_TRUE,NUM_TP,NUM_FN,NUM_FP
+0,rose,0.9054,40,39,1,237
+1,lotus,1.0,11,11,0,39
+2,hibiscuss,1.0,11,11,0,41
+3,marigold,0.9345,49,48,1,235
+4,sunflower,0.9243,20,20,0,148
