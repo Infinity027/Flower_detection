@@ -5,10 +5,9 @@
 ## [Content]
 1. [Description](#description)   
 2. [Usage](#usage)  
-2-1. [Model Training](#model-training)  
-2-2. [Detection Evaluation](#detection-evaluation)  
-2-3. [Result Analysis](#result-analysis)  
-3. [Contact](#contact)   
+3. [Model Training](#model-training)  
+4. [Detection Evaluation](#detection-evaluation)  
+
 
 ---
 
@@ -23,18 +22,18 @@ we train our model using five different type of flower 1.rose, 2.lotus 3.hibscus
 
 ## [Usage]
 
-#### Model Training 
- - You can train your own YOLOv1 model using various backbone architectures of ResNet18, ResNet34, ResNet50, ResNet101, VGG16, and VGG16-BN. If you wanna train YOLOv1 on your dataset from the scratch, add "--scratch" in training command like below.
+## Model Training 
+ - You can train your own YOLOv1 model using various backbone architectures of ResNet18, ResNet34, ResNet50, ResNet101, VGG16, and VGG16-BN. we train our model using resnet18.
 
 ```python
-python train.py --exp my_test 
-		--data voc.yaml 
+python train.py --exp flower 
+		--data flower.yaml 
 ```
 
 
-#### Detection Evaluation
+## Detection Evaluation
  - It computes detection metric via mean Average Precision(mAP) with IoU of 0.5, 0.75, 0.5:0.95. I follow the evaluation code with the reference on https://github.com/rafaelpadilla/Object-Detection-Metrics
 
 ```python
-python val.py --exp my_test --data voc.yaml --ckpt-name best.pt
+python val.py --exp flower --data flower.yaml --ckpt-name best.pt
 ``` 
